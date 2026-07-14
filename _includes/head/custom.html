@@ -1,0 +1,26 @@
+{% include base_path %}
+
+<!-- start custom head snippets -->
+
+<!-- Preload icon webfonts so social icons render on first paint (avoids needing a refresh) -->
+<link rel="preload" href="{{ base_path }}/assets/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ base_path }}/assets/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ base_path }}/assets/fonts/academicons.woff" as="font" type="font/woff" crossorigin>
+
+<link rel="icon" href="{{ base_path }}/images/favicon.ico" sizes="any">
+<link rel="mask-icon" href="{{ base_path }}/images/safari-pinned-tab.svg" color="#1f4d3f">
+<meta name="theme-color" content="#fbfaf7">
+<link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
+
+<!-- Force-load icon webfonts (Chrome doesn't always trigger download of fonts used only in ::before until a reflow) -->
+<script>
+  if (document.fonts && document.fonts.load) {
+    Promise.all([
+      document.fonts.load('900 1em "Font Awesome 6 Free"'),
+      document.fonts.load('400 1em "Font Awesome 6 Brands"'),
+      document.fonts.load('1em "Academicons"')
+    ]).catch(function () {});
+  }
+</script>
+
+<!-- end custom head snippets -->

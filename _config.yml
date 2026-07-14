@@ -1,0 +1,141 @@
+locale: "en-US"
+title: "Weicong Fang"
+title_separator: "·"
+name: "Weicong Fang"
+description: "Weicong Fang is an M.A. student in Communication at Renmin University of China studying misinformation correction, health communication, and human-AI communication."
+url: "https://weicongfang.github.io"
+baseurl: ""
+repository: "weicongfang/weicongfang.github.io"
+
+author:
+  avatar: "profile-web.jpg"
+  name: "Weicong Fang"
+  pronouns: "he/him"
+  bio: "M.A. Student in Communication"
+  location: "Beijing, China"
+  employer: "Renmin University of China"
+  email: "fangweicong@ruc.edu.cn"
+  googlescholar: "https://scholar.google.com/citations?user=54sbJl0AAAAJ"
+  github: "weicongfang"
+
+breadcrumbs: false
+words_per_minute: 180
+future: false
+read_more: "disabled"
+comments:
+  provider:
+
+atom_feed:
+  hide: true
+
+og_image: "profile-web.jpg"
+social:
+  type: "Person"
+  name: "Weicong Fang"
+  links:
+    - "https://scholar.google.com/citations?user=54sbJl0AAAAJ"
+    - "https://github.com/weicongfang"
+
+analytics:
+  provider: "false"
+
+include:
+  - _pages
+  - files
+
+exclude:
+  - ".asset-cache"
+  - ".bundle"
+  - ".github"
+  - ".jekyll-assets-cache"
+  - ".sass-cache"
+  - ".superpowers"
+  - "CONTRIBUTING.md"
+  - "Dockerfile"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "LICENSE"
+  - "README.md"
+  - "assets/css/academicons.min.css"
+  - "assets/css/collapse.css"
+  - "assets/fonts/Frutiger.ttf"
+  - "assets/fonts/Frutiger_bold.ttf"
+  - "assets/js"
+  - "assets/webfonts/fa-regular-400.ttf"
+  - "assets/webfonts/fa-regular-400.woff2"
+  - "assets/webfonts/fa-v4compatibility.ttf"
+  - "assets/webfonts/fa-v4compatibility.woff2"
+  - "assets/js/_main.js"
+  - "assets/js/plugins"
+  - "assets/js/vendor"
+  - "docs"
+  - "files/cv.tex"
+  - "images/.DS_Store"
+  - "images/browserconfig.xml"
+  - "images/manifest.json"
+  - "images/mstile-144x144.png"
+  - "images/mstile-150x150.png"
+  - "images/mstile-310x150.png"
+  - "images/mstile-310x310.png"
+  - "images/mstile-70x70.png"
+  - "images/profile.png"
+  - "images/site-logo.png"
+  - "local"
+  - "log"
+  - "markdown_generator"
+  - "node_modules"
+  - "package-lock.json"
+  - "package.json"
+  - "talkmap"
+  - "talkmap.ipynb"
+  - "talkmap.py"
+  - "tmp"
+  - "vendor"
+
+keep_files:
+  - ".git"
+
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+markdown: "kramdown"
+highlighter: "rouge"
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+kramdown:
+  input: "GFM"
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: "as_char"
+  toc_levels: "1..6"
+  smart_quotes: "lsquo,rsquo,ldquo,rdquo"
+  enable_coderay: false
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "single"
+      author_profile: true
+
+sass:
+  sass_dir: "_sass"
+  style: "compressed"
+
+permalink: "/:categories/:title/"
+timezone: "Asia/Shanghai"
+
+plugins:
+  - "jekyll-sitemap"
+
+whitelist:
+  - "jekyll-sitemap"
+
+compress_html:
+  clippings: "all"
+  ignore:
+    envs:
+      - "development"

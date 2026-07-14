@@ -1,0 +1,25 @@
+# Ignore the contents of the _site directory and other cache directories
+_site/
+.sass-cache/
+
+# Ignore the directory for local files during development
+local/
+
+# Ignore the Gemfile that is generated
+Gemfile.lock
+
+# Ingore files created by npm
+node_modules
+package-lock.json
+.superpowers/
+tmp/
+
+# Keep the editable CV source local; publish the generated PDF only
+files/cv.tex
+
+# Keep the full-resolution portrait local; publish the optimized web copy
+images/profile.png
+
+# Editor and OS files
+.obsidian/
+.DS_Store

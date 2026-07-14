@@ -1,0 +1,43 @@
+{% include base_path %}
+
+{% if page.author and site.data.authors[page.author] %}
+  {% assign author = site.data.authors[page.author] %}
+{% else %}
+  {% assign author = site.author %}
+{% endif %}
+
+<div class="author-profile" itemscope itemtype="https://schema.org/Person">
+  <div class="author__avatar">
+    {% if author.avatar contains "://" %}
+      <img src="{{ author.avatar }}" alt="Portrait of {{ author.name }}" itemprop="image">
+    {% else %}
+      <img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" alt="Portrait of {{ author.name }}" itemprop="image">
+    {% endif %}
+  </div>
+
+  <div class="author__content">
+    <p class="author__name" itemprop="name">{{ author.name }}</p>
+    {% if author.pronouns %}<p class="author__pronouns">{{ author.pronouns }}</p>{% endif %}
+    {% if author.bio %}<p class="author__bio" itemprop="jobTitle">{{ author.bio }}</p>{% endif %}
+  </div>
+
+  <div class="author__urls-wrapper">
+    <ul class="author__urls social-icons" aria-label="Profile links">
+      {% if author.location %}
+        <li class="author__detail"><i class="fa-solid fa-location-dot icon-pad-right" aria-hidden="true"></i><span>{{ author.location }}</span></li>
+      {% endif %}
+      {% if author.employer %}
+        <li class="author__detail"><i class="fa-solid fa-building-columns icon-pad-right" aria-hidden="true"></i><span itemprop="affiliation">{{ author.employer }}</span></li>
+      {% endif %}
+      {% if author.email %}
+        <li><a href="mailto:{{ author.email }}" itemprop="email"><i class="fa-solid fa-envelope icon-pad-right" aria-hidden="true"></i>Email</a></li>
+      {% endif %}
+      {% if author.googlescholar %}
+        <li><a href="{{ author.googlescholar }}"><i class="ai ai-google-scholar icon-pad-right" aria-hidden="true"></i>Google Scholar</a></li>
+      {% endif %}
+      {% if author.github %}
+        <li><a href="https://github.com/{{ author.github }}"><i class="fa-brands fa-github icon-pad-right" aria-hidden="true"></i>GitHub</a></li>
+      {% endif %}
+    </ul>
+  </div>
+</div>
