@@ -17,13 +17,13 @@ The paragraph retains the journal publications, marks *News and Writing* as Chin
 - Add canonical display fields under `author` in `_config.yml` for the masthead name (`Weicong FANG`) and Chinese name (`方炜聪`).
 - The masthead displays only `Weicong FANG`; remove the masthead pronouns.
 - Keep `he/him` in every left-side profile area.
-- About, Publications, Research, and CV display the same profile hierarchy:
+- Every page that renders a left-side profile area, including About, Publications, Research, CV, and Sitemap, displays the same profile hierarchy:
   1. `Weicong Fang` with `he/him`
   2. `方炜聪` on a separate line
   3. `M.A. Student in Communication`
 - Make the About profile and shared child-page author profile read identity values from `site.author` rather than duplicating names or roles.
 - Style the Chinese name with a modern system sans-serif stack: `"PingFang SC"`, `"Noto Sans CJK SC"`, `"Microsoft YaHei"`, sans-serif.
-- Give the Chinese name approximately the same size and weight as the role line while preserving the existing color palette, spacing, and responsive layout.
+- Give the Chinese name exactly the same `font-size` and `font-weight` as the role line while preserving the existing color palette and responsive layout; only the Chinese font family and the spacing required for the separate line differ.
 
 ## Navigation
 
@@ -47,8 +47,8 @@ Keep the existing labels and URLs.
 
 - Run a production Jekyll build.
 - Confirm every page masthead contains `Weicong FANG` and no masthead pronouns.
-- Confirm About, Publications, Research, and CV render the same three-line identity hierarchy and retain `he/him` in the profile area.
-- Confirm the Chinese name uses the intended font stack and is visually comparable to the role line at desktop and mobile widths.
+- Confirm every generated page with a left-side profile area, including About, Publications, Research, CV, and Sitemap, renders the same three-line identity hierarchy and retains `he/him` in the profile area.
+- Confirm the Chinese name uses the intended font stack and the same computed `font-size` and `font-weight` as the role line at desktop and mobile widths.
 - Confirm the About achievement paragraph matches the approved wording.
 - Confirm the navigation order is About, Publications, Research, CV on all four pages.
 - Confirm Publications, web CV, and downloadable PDF content are unchanged.
