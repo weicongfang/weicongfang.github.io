@@ -18,9 +18,10 @@ The first two items are text. Email, Google Scholar, and ORCID are links. ORCID 
 
 ## Implementation design
 
-- Keep the profile values under `author` in `_config.yml` and add the ORCID URL there.
-- Remove the GitHub author field and GitHub social metadata.
+- Keep the canonical values only under `author` in `_config.yml`: `location`, `employer`, `email`, `googlescholar`, and `orcid`.
+- Remove the GitHub author field and the separately maintained `social.links` list.
 - Make the About profile and the shared child-page author profile read these values from `site.author`.
+- Make the person-level SEO metadata generate `sameAs` directly from `site.author.googlescholar` and `site.author.orcid`, so profile links are not duplicated in configuration.
 - Preserve the existing page-specific layout and CSS classes while ensuring both render the five items in the same order.
 - Remove the separate institution line from the About identity block so the institution appears once, in the unified profile list.
 - Do not change navigation, typography, biography, research content, or other links elsewhere in the site.
@@ -35,7 +36,9 @@ The first two items are text. Email, Google Scholar, and ORCID are links. ORCID 
 ## Verification
 
 - Build the site with the production Jekyll configuration.
-- Confirm About, Research, Publications, and CV each show the same five items in the specified order.
-- Confirm GitHub is absent from all four profile areas.
+- Confirm About, Research, Publications, and CV each show exactly the same five items in the specified order, with no sixth item.
+- Confirm GitHub is absent from all four profile areas and from the generated person-level SEO metadata.
+- Confirm the About and shared author-profile templates no longer hard-code the location, institution, email address, Google Scholar URL, or ORCID URL.
 - Confirm the ORCID icon renders and the Email, Google Scholar, and ORCID links resolve to the intended destinations.
+- Confirm the generated person-level SEO metadata contains the canonical Google Scholar and ORCID URLs.
 - Check desktop and mobile layouts for wrapping or alignment regressions.
