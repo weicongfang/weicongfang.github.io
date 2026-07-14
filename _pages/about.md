@@ -15,13 +15,13 @@ redirect_from:
     <div class="home-profile__identity">
       <h1 id="home-name">Weicong Fang <span class="pronouns">he/him</span></h1>
       <p class="home-profile__role">M.A. Student in Communication</p>
-      <p>Renmin University of China</p>
     </div>
     <ul class="home-profile__links" aria-label="Contact and academic profiles">
-      <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Beijing, China</span></li>
-      <li><a href="mailto:fangweicong@ruc.edu.cn"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Email</a></li>
-      <li><a href="https://scholar.google.com/citations?user=54sbJl0AAAAJ"><i class="ai ai-google-scholar" aria-hidden="true"></i>Google Scholar</a></li>
-      <li><a href="https://github.com/weicongfang"><i class="fa-brands fa-github" aria-hidden="true"></i>GitHub</a></li>
+      <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>{{ site.author.location }}</span></li>
+      <li><i class="fa-solid fa-building-columns" aria-hidden="true"></i><span>{{ site.author.employer }}</span></li>
+      <li><a href="mailto:{{ site.author.email }}"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Email</a></li>
+      <li><a href="{{ site.author.googlescholar }}"><i class="ai ai-google-scholar" aria-hidden="true"></i>Google Scholar</a></li>
+      <li><a href="{{ site.author.orcid }}" rel="me"><i class="ai ai-orcid" aria-hidden="true"></i>ORCID</a></li>
     </ul>
   </aside>
 

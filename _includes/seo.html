@@ -103,12 +103,12 @@
   <link rel="next" href="{{ paginator.next_page_path | prepend: seo_url }}">
 {% endif %}
 
-{% if site.social %}
+{% if site.author %}
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "{% if site.social.type %}{{ site.social.type }}{% else %}Person{% endif %}",
-      "name": {{ site.social.name | default: site.name | jsonify }},
+      "@type": "Person",
+      "name": {{ site.name | jsonify }},
       "url": {{ seo_url | jsonify }},
       "image": {{ site.author.avatar | prepend: "/images/" | prepend: seo_url | jsonify }},
       "jobTitle": {{ site.author.bio | jsonify }},
@@ -116,7 +116,10 @@
         "@type": "CollegeOrUniversity",
         "name": {{ site.author.employer | jsonify }}
       },
-      "sameAs": {{ site.social.links | jsonify }}
+      "sameAs": [
+        {{ site.author.googlescholar | jsonify }},
+        {{ site.author.orcid | jsonify }}
+      ]
     }
   </script>
 {% endif %}

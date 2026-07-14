@@ -16,7 +16,7 @@ author:
   employer: "Renmin University of China"
   email: "fangweicong@ruc.edu.cn"
   googlescholar: "https://scholar.google.com/citations?user=54sbJl0AAAAJ"
-  github: "weicongfang"
+  orcid: "https://orcid.org/0009-0009-3184-308X"
 
 breadcrumbs: false
 words_per_minute: 180
@@ -29,13 +29,6 @@ atom_feed:
   hide: true
 
 og_image: "profile-web.jpg"
-social:
-  type: "Person"
-  name: "Weicong Fang"
-  links:
-    - "https://scholar.google.com/citations?user=54sbJl0AAAAJ"
-    - "https://github.com/weicongfang"
-
 analytics:
   provider: "false"
 
