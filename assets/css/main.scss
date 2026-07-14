@@ -1033,25 +1033,40 @@ a {
 /* Responsive behavior */
 
 @media (min-width: 925px) {
+  #main:not(.academic-home) {
+    display: grid;
+    grid-template-columns: 210px minmax(0, 1fr);
+    align-items: start;
+    column-gap: clamp(2rem, 4vw, 3.25rem);
+  }
+
   .sidebar {
     position: sticky !important;
     top: 6.25rem;
-    float: left;
-    width: 210px;
+    grid-column: 1;
+    float: none;
+    width: auto;
     height: auto !important;
-    margin: 0 3.25rem 0 0;
+    margin: 0;
     padding-top: 0 !important;
     overflow: visible !important;
   }
 
   .sidebar + .page,
   .sidebar + .archive {
-    float: right;
-    width: calc(100% - 263px);
+    grid-column: 2;
+    min-width: 0;
+    width: auto;
+    float: none;
     margin-right: 0;
     margin-left: 0;
     padding-right: 0;
     padding-left: 0;
+  }
+
+  #main > .page:only-child,
+  #main > .archive:only-child {
+    grid-column: 1 / -1;
   }
 }
 
