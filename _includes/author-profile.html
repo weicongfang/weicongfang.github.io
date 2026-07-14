@@ -16,8 +16,8 @@
   </div>
 
   <div class="author__content">
-    <p class="author__name" itemprop="name">{{ author.name }}</p>
-    {% if author.pronouns %}<p class="author__pronouns">{{ author.pronouns }}</p>{% endif %}
+    <p class="author__name"><span itemprop="name">{{ author.name }}</span>{% if author.pronouns %} <span class="pronouns">{{ author.pronouns }}</span>{% endif %}</p>
+    {% if author.name_zh %}<p class="profile-name-zh" itemprop="alternateName" lang="zh-CN">{{ author.name_zh }}</p>{% endif %}
     {% if author.bio %}<p class="author__bio" itemprop="jobTitle">{{ author.bio }}</p>{% endif %}
   </div>
 

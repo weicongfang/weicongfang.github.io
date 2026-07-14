@@ -10,6 +10,8 @@ repository: "weicongfang/weicongfang.github.io"
 author:
   avatar: "profile-web.jpg"
   name: "Weicong Fang"
+  masthead_name: "Weicong FANG"
+  name_zh: "方炜聪"
   pronouns: "he/him"
   bio: "M.A. Student in Communication"
   location: "Beijing, China"

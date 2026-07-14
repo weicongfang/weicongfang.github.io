@@ -280,9 +280,10 @@ a {
 }
 
 .author__bio {
-  margin: 0.75rem 0 1rem;
+  margin: 0 0 1rem;
   color: #506159;
   font-size: 0.82rem !important;
+  font-weight: 650;
   line-height: 1.55;
 }
 
@@ -395,6 +396,16 @@ a {
 .home-profile__role {
   color: #354b42 !important;
   font-weight: 650;
+}
+
+.profile-name-zh {
+  margin: 0;
+  color: #354b42;
+  font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  font-size: 0.82rem !important;
+  font-weight: 650;
+  line-height: 1.55;
+  letter-spacing: 0;
 }
 
 .home-profile__links {

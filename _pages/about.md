@@ -13,8 +13,9 @@ redirect_from:
   <aside class="home-profile" aria-label="Profile">
     <img class="home-profile__portrait" src="/images/profile-web.jpg" alt="Portrait of Weicong Fang">
     <div class="home-profile__identity">
-      <h1 id="home-name">Weicong Fang <span class="pronouns">he/him</span></h1>
-      <p class="home-profile__role">M.A. Student in Communication</p>
+      <h1 id="home-name">{{ site.author.name }} <span class="pronouns">{{ site.author.pronouns }}</span></h1>
+      <p class="profile-name-zh" lang="zh-CN">{{ site.author.name_zh }}</p>
+      <p class="home-profile__role">{{ site.author.bio }}</p>
     </div>
     <ul class="home-profile__links" aria-label="Contact and academic profiles">
       <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>{{ site.author.location }}</span></li>
@@ -31,7 +32,7 @@ redirect_from:
     <div class="home-bio">
       <p>I am an M.A. student in Communication at Renmin University of China. My work lies at the intersection of misinformation correction, health communication, and human-AI communication. I have examined how human, AI, and hybrid sources, corrective strategies, and reasoning structures shape audience responses to health misinformation and fact-checking.</p>
       <p>Building on this work, my current interests focus on how people engage with generative AI for information and support during health-related uncertainty, and what these interactions mean for trust, judgment, help-seeking, and well-being.</p>
-      <p>My work has been published in the <em>International Journal of Human–Computer Interaction</em> and <em>News and Writing</em>. I have presented earlier work at the Annual Conference of the Health Communication Committee of the Chinese Association for History of Journalism and Communication; related conference papers have been submitted to IAMCR and the International Conference on Chinese-Language Media and Huaxia Civilisations.</p>
+      <p>My work has been published in the <em>International Journal of Human–Computer Interaction</em> and <em>News and Writing</em> (in Chinese). My research has been presented at the annual conferences of the International Association for Media and Communication Research (IAMCR) and the International Communication Association (ICA), as well as at the International Conference on Chinese-Language Media and Huaxia Civilisations and the Annual Conference of the Health Communication Committee of the Chinese Association for History of Journalism and Communication.</p>
     </div>
     <p class="methods-line"><strong>Methods:</strong> experiments, surveys, computational text analysis, social network analysis, sentiment analysis, and thematic analysis.</p>
     <div class="home-actions">

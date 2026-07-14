@@ -4,8 +4,7 @@
   <div class="masthead__inner-wrap">
     <nav class="site-nav" aria-label="Primary navigation">
       <a class="site-brand" href="{{ base_path }}/">
-        <span>Weicong Fang</span>
-        <span class="site-brand__pronouns">he/him</span>
+        <span>{{ site.author.masthead_name }}</span>
       </a>
       <ul class="site-nav__links">
         {% for link in site.data.navigation.main %}
