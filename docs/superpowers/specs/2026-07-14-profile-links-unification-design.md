@@ -16,6 +16,11 @@ Display the following five items in this order:
 
 The first two items are text. Email, Google Scholar, and ORCID are links. ORCID uses the Academicons `ai-orcid` icon already bundled with the site.
 
+The canonical academic-profile URLs are:
+
+- `author.googlescholar: "https://scholar.google.com/citations?user=54sbJl0AAAAJ"`
+- `author.orcid: "https://orcid.org/0009-0009-3184-308X"`
+
 ## Implementation design
 
 - Keep the canonical values only under `author` in `_config.yml`: `location`, `employer`, `email`, `googlescholar`, and `orcid`.
